@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de Motos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .motorcycle-container {
+            display: flex;
+            background-color: white;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .motorcycle-container:hover {
+            transform: scale(1.02);
+        }
+        .motorcycle-image {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .motorcycle-image img {
+            max-width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+        .motorcycle-details {
+            width: 60%;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .motorcycle-details h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 2rem;
+        }
+        .motorcycle-details .specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .specs-item {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .specs-item strong {
+            display: block;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+        .cotizar-btn {
+            align-self: flex-start;
+            padding: 12px 25px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .cotizar-btn:hover {
+            background-color: #218838;
+            transform: translateY(-3px);
+        }
+        .price {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Moto 1 -->
+    <div id="moto1" class="motorcycle-container">
+        <div class="motorcycle-image">
+            <img src="xtz.jpeg" alt="Moto 1">
+        </div>
+        <div class="motorcycle-details">
+            <div>
+                <h2>Yamaha XTZ 150</h2>
+                <p class="price">$12.900.000</p>
+                <div class="specs">
+                    <div class="specs-item">
+                        <strong>Cilindrada</strong>
+                        150cc
+                    </div>
+                    <div class="specs-item">
+                        <strong>Año</strong>
+                        2025
+                    </div>
+                    <div class="specs-item">
+                        <strong>Color</strong>
+                        Azul Racing
+                    </div>
+                    <div class="specs-item">
+                        <strong>Tipo</strong>
+                        Enduro
+                    </div>
+                </div>
+                <p>La Yamaha XTZ 150 es una motocicleta dual-sport diseñada para un equilibrio entre conducción en ciudad y terrenos.</p>
+            </div>
+            <a href="/cotizar?moto=moto1" class="cotizar-btn">Cotizar</a>
+        </div>
+    </div>
+
+    <!-- Moto 2 -->
+    <div id="moto2" class="motorcycle-container">
+        <div class="motorcycle-image">
+            <img src="ninja.jpeg" alt="Moto 2">
+        </div>
+        <div class="motorcycle-details">
+            <div>
+                <h2>Kawasaki Ninja H2R</h2>
+                <p class="price">$124.990.000</p>
+                <div class="specs">
+                    <div class="specs-item">
+                        <strong>Cilindrada</strong>
+                        998cc
+                    </div>
+                    <div class="specs-item">
+                        <strong>Año</strong>
+                        2025
+                    </div>
+                    <div class="specs-item">
+                        <strong>Color</strong>
+                        Negro con detalles en verde
+                    </div>
+                    <div class="specs-item">
+                        <strong>Tipo</strong>
+                        Deportiva (Hyperbike)
+                    </div>
+                </div>
+                <p>Moto compacta y eficiente, perfecta para el transporte diario en la ciudad. Económica y fácil de maniobrar.</p>
+            </div>
+            <a href="/cotizar?moto=moto2" class="cotizar-btn">Cotizar</a>
+        </div>
+    </div>
+
+    <!-- Moto 3 -->
+    <div id="moto3" class="motorcycle-container">
+        <div class="motorcycle-image">
+            <img src="cb.jpeg" alt="Moto 3">
+        </div>
+        <div class="motorcycle-details">
+            <div>
+                <h2>Honda CB100</h2>
+                <p class="price">$5.900.000</p>
+                <div class="specs">
+                    <div class="specs-item">
+                        <strong>Cilindrada</strong>
+                        100cc
+                    </div>
+                    <div class="specs-item">
+                        <strong>Año</strong>
+                        2025
+                    </div>
+                    <div class="specs-item">
+                        <strong>Color</strong>
+                        Rojo, negro
+                    </div>
+                    <div class="specs-item">
+                        <strong>Tipo</strong>
+                        Clásica/Urban
+                    </div>
+                </div>
+                <p>Moto todoterreno diseñada para aventureros. Potente y versátil, preparada para cualquier tipo de terreno.</p>
+            </div>
+            <a href="/cotizar?moto=moto3" class="cotizar-btn">Cotizar</a>
+        </div>
+    </div>
+
+    <!-- Moto 4 -->
+    <div id="moto4" class="motorcycle-container">
+        <div class="motorcycle-image">
+            <img src="nkd.jpeg" alt="Moto 4">
+        </div>
+        <div class="motorcycle-details">
+            <div>
+                <h2>NKD 125</h2>
+                <p class="price">$5.390.000</p>
+                <div class="specs">
+                    <div class="specs-item">
+                        <strong>Cilindrada</strong>
+                        125cc
+                    </div>
+                    <div class="specs-item">
+                        <strong>Año</strong>
+                        2025
+                    </div>
+                    <div class="specs-item">
+                        <strong>Color</strong>
+                        Negro 
+                    </div>
+                    <div class="specs-item">
+                        <strong>Tipo</strong>
+                        Urbana/Naked
+                    </div>
+                </div>
+                <p>Crucero de lujo con diseño clásico y comodidad superior. Ideal para viajes largos y paseos relajados.</p>
+            </div>
+            <a href="/cotizar?moto=moto4" class="cotizar-btn">Cotizar</a>
+        </div>
+    </div>
+
+    <!-- Moto 5 -->
+    <div id="moto5" class="motorcycle-container">
+        <div class="motorcycle-image">
+            <img src="raider.jpeg" alt="Moto 5">
+        </div>
+        <div class="motorcycle-details">
+            <div>
+                <h2>TVS Raider 125</h2>
+                <p class="price">$7.599.999</p>
+                <div class="specs">
+                    <div class="specs-item">
+                        <strong>Cilindrada</strong>
+                        125cc
+                    </div>
+                    <div class="specs-item">
+                        <strong>Año</strong>
+                        2025
+                    </div>
+                    <div class="specs-item">
+                        <strong>Color</strong>
+                        Negro, rojo
+                    </div>
+                    <div class="specs-item">
+                        <strong>Tipo</strong>
+                        Underbone
+                    </div>
+                </div>
+                <p>Moto urbana de estilo naked con un diseño moderno y agresivo. Perfecta para ciudad y carretera.</p>
+            </div>
+            <a href="/cotizar?moto=moto5" class="cotizar-btn">Cotizar</a>
+        </div>
+    </div>
+
+    <!-- Moto 6 -->
+    <div id="moto6" class="motorcycle-container">
+        <div class="motorcycle-image">
+            <img src="emete.jpeg" alt="Moto 6">
+        </div>
+        <div class="motorcycle-details">
+            <div>
+                <h2>MT-09</h2>
+                <p class="price">$60.990.000</p>
+                <div class="specs">
+                    <div class="specs-item">
+                        <strong>Cilindrada</strong>
+                        890cc
+                    </div>
+                    <div class="specs-item">
+                        <strong>Año</strong>
+                        2025
+                    </div>
+                    <div class="specs-item">
+                        <strong>Color</strong>
+                        Negro, azul
+                    </div>
+                    <div class="specs-item">
+                        <strong>Tipo</strong>
+                        Naked
+                    </div>
+                </div>
+                <p>Moto eléctrica de última generación. Sostenible, silenciosa y con tecnología de punta para movilidad urbana.</p>
+            </div>
+            <a href="/cotizar?moto=moto6" class="cotizar-btn">Cotizar</a>
+        </div>
+    </div>
+</body>
+</html>
